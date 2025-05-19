@@ -2,29 +2,46 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width-device-width, inital-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Karlo Modric | Portfolio</title>
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     </head>
     <body>
         <header>
-            <div  class="container">
-            <h1>Karlo Modric</h1>
+            <div class="container nav">
+            <h1 class="logo">Karlo Modric</h1>
             <nav>
+                <ul class="nav-links">
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
+                </ul>
             </nav>
-            <button id="toggle-theme">🌓</button>
+            <button id="toggle-theme" title="Toggle dark/light mode">🌓</button>
             </div>
         </header>
 
         <section id="about" class="container" data-aos="fade-up">
             <h2>About me</h2>
-            <img src="IMG_2226.jpg" alt="Karlo Modric" class="profile-pic">
-            <p>I am a full-stack developer in training. I have experience in HTML, CSS, JavaScript, Python, and more</p>
+            <img src="assets/IMG_2226.jpg" alt="Karlo Modric" class="profile-pic">
+            <p>Hi, I'm Karlo Modric - a "self-taught" full-stack developer with a background in hospitality management and a passion for clean, user-friendly design.</p>
+            <p>I hold a Certificate of Higher Education in Computer Science and have worked on several hands-on projects, including game development and web design. I'm currently transitioning into tech full-time, focused on modern web technologies like HTML, CSS, JavaScript, and Python.</p>
+            <p>I bring a unique mix of leadership, creativity, and technical curiosity. My mission? Build digital experiences that are fast, accessible, and genuinely helpful.</p>
+        </section>
+
+        <section id="skills" class="container" data-aos="fade-up">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"><p>HTML</p></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"><p>CSS</p></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"><p>JavaScript</p></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"><p>Python</p></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"><p>Git</p></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"><p>Github</p></div>
+            </div>
         </section>
 
         <section id="projects" class="container" data-aos="fade-up">
@@ -32,10 +49,51 @@
             <div class="project-grid">
                 <div class="project-card">
                     <h3>Portfolio Website</h3>
-                    <p>This very website - built with basic web tech, hosted on GitHub.</p>
+                    <p>This is the site you're viewing - a personal project to showcase my skills, built with HTML, CSS, and JavaScript, hosted via GitHub.</p>
                     <a href="#" target="_blank">View Project</a>
                 </div>
-                <!--Add projects as I complete them-->
+
+                <div class="project-card">
+                    <h3>Planned: Blog Platform</h3>
+                    <p>A full-stack blog with user auth, markdown editor, and comment section. Tech: Node.js, Express, MongoDB, EJS.</p>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Planned: Task Manager App</h3>
+                    <p>To-do app with dark mode, drag-and-drop tasks, and progress tracking. Tech: React, Firebase.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Planned: API Weather Dashboard</h3>
+                    <p>Weather app using OpenWeather API. Users can search cities and view 7-day forecasts. Tech: JavaScript, API integration.</p>
+                </div>
+            </div>
+        </section>
+
+         <section id="timeline" class="timeline-section">
+            <h2>Experience & Education</h2>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-date">2021-Present</div>
+                    <div class="timeline-content">
+                        <h3>General Manager - Darleys Restaurant</h3>
+                        <p>Managed a Michelin-recommended fine dining restaurant, leading the team and delivering exceptional guest experiences.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-content">
+                        <h3>Certificate of Higher Education - Computer Science</h3>
+                        <p>University of Derby</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-date">2018</div>
+                    <div class="timeline-content">
+                        <h3>College Computer Science Degree</h3>
+                        <p>Completed in Croatia</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -43,7 +101,7 @@
             <h2>Contact</h2>
             <p>Email: karloomodric@gmail.com</p>
             <p>GitHub: <a href="https://github.com/karloomodric">karloomodric</a></p>
-            <p><a href="Document (1).pdf" download>Download My CV</a></p>
+            <p><a href="assets/Document (1).pdf" download>Download My CV</a></p>
         </section>
 
         <footer>
@@ -52,6 +110,11 @@
 
         <script src="script.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init();
         </script>
