@@ -5,33 +5,55 @@
         <meta name="viewport" content="width-device-width, inital-scale=1.0">
         <title>Karlo Modric | Portfolio</title>
         <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     </head>
     <body>
         <header>
+            <div  class="container">
             <h1>Karlo Modric</h1>
             <nav>
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
             </nav>
+            <button id="toggle-theme">🌓</button>
+            </div>
         </header>
 
-        <section id="about">
+        <section id="about" class="container" data-aos="fade-up">
             <h2>About me</h2>
+            <img src="IMG_2226.jpg" alt="Karlo Modric" class="profile-pic">
             <p>I am a full-stack developer in training. I have experience in HTML, CSS, JavaScript, Python, and more</p>
         </section>
 
-        <section id="projects">
+        <section id="projects" class="container" data-aos="fade-up">
             <h2>Projects</h2>
-            <p>Coming soon!</p>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Portfolio Website</h3>
+                    <p>This very website - built with basic web tech, hosted on GitHub.</p>
+                    <a href="#" target="_blank">View Project</a>
+                </div>
+                <!--Add projects as I complete them-->
+            </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="container" data-aos="fade-up">
             <h2>Contact</h2>
             <p>Email: karloomodric@gmail.com</p>
             <p>GitHub: <a href="https://github.com/karloomodric">karloomodric</a></p>
+            <p><a href="Document (1).pdf" download>Download My CV</a></p>
         </section>
 
+        <footer>
+            <p>2025 Karlo Modric. All rights reserved.</p>
+        </footer>
+
         <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </body>
 </html>

@@ -1,26 +1,113 @@
+:root {
+    --bg: #f4f4f4;
+    --text: #222;
+    --accent: #0077ff;
+    --card: white;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
 header {
-    background-color: #333;
+    background: var(--accent);
     color: white;
-    padding: 20px;
+    padding: 1.5rem 0;
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
-nav a {
-    margin: 0 15px;
+header nav {
+    margin: 1rem;
+}
+
+header nav a {
     color: white;
     text-decoration: none;
+    margin: 0 10px;
+    font-weight: 600;
 }
 
 section {
-    padding: 20px;
+    margin-top: 2rem;
 }
 
-a:hover {
-    text-decoration: underline;
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1ft));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background: var(--card);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+body.dark {
+    --bg: #1e1e1e;
+    --text: #f5f5f5;
+    --card: #2b2b2b;
+}
+
+#toggle-theme {
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
 }
